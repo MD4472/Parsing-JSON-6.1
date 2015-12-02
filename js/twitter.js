@@ -15,9 +15,21 @@ $(document).ready(function() {
     // var cityP = $("<p>").append(twitterData.address.city);
     var locationP = $("<p>").append("location: " + twitterData.user.location);
     var url = $("<p>").append("url: " + twitterData.entities.urls[0].indices[0]);
+    // to access number 52 in line 14, use entities.urls then use
+    // square brackets to access the first element in the array of urls 
+    // (which is index 0).   Thus entities.urls[0].   Now to access number
+    // 52, the number 52 is the first element in the indicies array.  Thus
+    // entities.urls[0].indicies[0].  
+    
+
     var retweeted = $ ("<p>").append("retweeted: " + twitterData.retweeted);
     var displayUrl = $ ("<p>").append("displayUrl: " + 
       twitterData.entities.urls[0].display_url);
+
+    // to access display url in line 17, use entities.urls[0] to get
+    // into the urls array.  Once in the urls array, just type display_url
+    // because you are still in the first element of the array, which
+    // is index 0.
 
     thumbnailDiv
       .append(userImg)
